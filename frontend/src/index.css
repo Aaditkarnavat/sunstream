@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+
+/* Full-page background */
+.app {
+  position: relative;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f9fafb;
+}
+
+.app-bg {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(8, 47, 73, 0.8)),
+    url("/solar-bg.jpg") center/cover no-repeat;
+  z-index: -1;
+}
+
+/* Semi-transparent overlay to center content */
+.app-overlay {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+  width: 100%;
+  position: relative;
+}
+
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.app-title {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.app-tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  opacity: 0.9;
+}
+
+
+.header-actions {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  background: #f9fafb;
+  color: #0f172a;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.logout-button {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  background: #ef4444;
+  color: #f9fafb;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+.app-main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.auth-card,
+.info-card {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 1.2rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.auth-card {
+  flex: 1.2;
+}
+
+.info-card {
+  flex: 1;
+}
+
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+
+.logged-in {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(15, 23, 42, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin: 0;
+  z-index: 10;
+}
+
+
+.auth-card form label {
+  display: block;
+  margin-bottom: 0.9rem;
+}
+
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.6rem;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+
+button,
+.buy-button,
+.logout-button,
+.tips-button,
+.confirm-button,
+.cancel-button,
+.close-modal {
+  border-radius: 999px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.app-high-contrast .app-bg {
+  background: #000;
+}
+
+.app-high-contrast .auth-card,
+.app-high-contrast .info-card {
+  background: #000;
+  border: 2px solid #fff;
+}
+
+
+.role-fieldset {
+  border: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.role-options {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.radio-option input[type="radio"] {
+  margin: 0;
+}
+
+
+.tips-button,
+.close-modal {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background: #22c55e;
+  color: #022c22;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal {
+  background: #020617;
+  padding: 1.75rem 2rem;
+  border-radius: 1rem;
+  max-width: 480px;
+  width: 90%;
+  color: #e5e7eb;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+
+.modal h3 {
+  margin-top: 0;
+  color: #22c55e;
+  font-size: 1.5rem;
+}
+
+.modal p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.offer-item {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: rgba(15, 23, 42, 0.9);
+  margin-bottom: 0.5rem;
+}
+
+.offer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.buy-button {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: none;
+  background: #22c55e;
+  color: #022c22;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+
+.billing-card {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 1.2rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  margin-top: 1rem;
+}
+
+.confirm-button,
+.cancel-button {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.confirm-button {
+  background: #22c55e;
+  color: #022c22;
+}
+
+.cancel-button {
+  background: #6b7280;
+  color: #f9fafb;
+}
