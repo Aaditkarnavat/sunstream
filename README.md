@@ -1,36 +1,57 @@
 # Sunstream
 
-React + Vite + Firebase web app for sharing solar energy between prosumers and consumers.
+**Cardiff Metropolitan University | Mobile and Web Technologies Module**
 
-## How to run (frontend)
+A peer-to-peer solar energy trading platform built with React, Node.js, and Firebase.
 
-Requirements: Node.js LTS.
+## Overview
 
-1. Open a terminal:
-   cd sunstream/frontend
+Sunstream enables prosumers (solar energy producers) to trade energy credits with consumers. The application simulates real-time energy transactions, user authentication, and grid carbon intensity integration.
 
-2. Install dependencies:
-   npm install
+## Features
 
-3. Start the dev server:
-   npm run dev
+- **User Authentication** – Firebase Authentication for secure login and role-based access
+- **Energy Trading Dashboard** – Frontend interface for browsing, creating, and managing energy offers
+- **Real-time Data** – Firestore for live updates and data persistence
+- **Grid Carbon Intensity** – Integration with UK Carbon Intensity API for sustainability metrics
+- **Cloud Deployment** – Firebase Hosting for frontend, custom Node.js backend for API endpoints
 
-4. Open the URL shown in the terminal (usually http://localhost:5173).
+## Tech Stack
 
-## How to run (backend)
+- **Frontend:** React, Vite, JSX
+- **Backend:** Node.js, Express.js
+- **Database & Auth:** Firebase (Firestore, Authentication)
+- **External APIs:** UK Carbon Intensity API
+- **Deployment:** Firebase Hosting
 
-The backend provides API endpoints for offers and recommendations.
+## Project Structure
 
-1. Open a second terminal:
-   cd sunstream/backend
+```
+sunstream/
+├── frontend/       # React + Vite frontend
+├── backend/        # Node.js API server
+├── shared/         # Shared utilities and types
+├── n/              # Node modules and configuration
+├── .firebaserc     # Firebase project config
+└── firebase.json   # Hosting and Firestore rules
+```
 
-2. Install Dependencies and start backend server
-   cd sunstream/backend : node index.js
+## How to Run
 
-3. Backend will run on http://localhost:3000
+**Frontend**
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
+**Backend**
+```bash
+cd backend
+npm install
+node index.js
+```
 
-## Notes
+---
 
-- Firebase Authentication and Firestore are used for authentication and data storage.
-- External API: UK Carbon Intensity API for live grid carbon intensity.
+*A. Karnavat
